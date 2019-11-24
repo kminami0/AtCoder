@@ -1,0 +1,12 @@
+{
+	"id": 8595844,
+	"epoch_second": 1574570359,
+	"problem_id": "ddcc2020_qual_d",
+	"contest_id": "ddcc2020-qual",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 500,
+	"length": 596,
+	"result": "AC",
+	"execution_time": 118
+}
