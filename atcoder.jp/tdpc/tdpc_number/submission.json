@@ -1,0 +1,12 @@
+{
+	"id": 9834719,
+	"epoch_second": 1580441536,
+	"problem_id": "tdpc_number",
+	"contest_id": "tdpc",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 4,
+	"length": 2494,
+	"result": "AC",
+	"execution_time": 275
+}
