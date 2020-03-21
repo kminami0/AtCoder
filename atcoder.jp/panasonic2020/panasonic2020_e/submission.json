@@ -1,0 +1,12 @@
+{
+	"id": 11054660,
+	"epoch_second": 1584796947,
+	"problem_id": "panasonic2020_e",
+	"contest_id": "panasonic2020",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 500,
+	"length": 2895,
+	"result": "AC",
+	"execution_time": 83
+}
