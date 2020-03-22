@@ -1,0 +1,12 @@
+{
+	"id": 11071179,
+	"epoch_second": 1584847568,
+	"problem_id": "maximum_cup_2018_c",
+	"contest_id": "maximum-cup-2018",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 100,
+	"length": 2014,
+	"result": "AC",
+	"execution_time": 44
+}
