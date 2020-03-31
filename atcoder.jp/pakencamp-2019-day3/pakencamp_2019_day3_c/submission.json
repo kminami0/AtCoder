@@ -1,0 +1,12 @@
+{
+	"id": 11383325,
+	"epoch_second": 1585622395,
+	"problem_id": "pakencamp_2019_day3_c",
+	"contest_id": "pakencamp-2019-day3",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 100,
+	"length": 1262,
+	"result": "AC",
+	"execution_time": 7
+}
