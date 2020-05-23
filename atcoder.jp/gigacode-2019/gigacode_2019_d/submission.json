@@ -1,0 +1,12 @@
+{
+	"id": 13492828,
+	"epoch_second": 1590199516,
+	"problem_id": "gigacode_2019_d",
+	"contest_id": "gigacode-2019",
+	"user_id": "agarai3",
+	"language": "C++14 (GCC 5.4.1)",
+	"point": 100,
+	"length": 1478,
+	"result": "AC",
+	"execution_time": 191
+}
