@@ -1,0 +1,108 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+#define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
+#define rep2(i, s, n) for (ll i = (s); i < (ll)(n); i++)
+#define all(v) v.begin(), v.end()
+#define sz(v) v.size()
+#define INF 100000000000000 //10^14
+template <typename T>
+bool chmax(T &a, const T& b) {
+  if (a < b) {
+    a = b;
+    return true;
+  }
+  return false;
+}
+template <typename T>
+bool chmin(T &a, const T& b) {
+  if (a > b) {
+    a = b;
+    return true;
+  }
+  return false;
+}
+
+// auto mod int
+// https://youtu.be/L8grWxBlIZ4?t=9858
+// https://youtu.be/ERZuLAxZffQ?t=4807 : optimize
+// https://youtu.be/8uowVvQ_-Mo?t=1329 : division
+const int mod = 1000000007;
+struct mint {
+  ll x; // typedef long long ll;
+  mint(ll x=0):x((x%mod+mod)%mod){}
+  mint operator-() const { return mint(-x);}
+  mint& operator+=(const mint a) {
+  if ((x += a.x) >= mod) x -= mod;
+  return *this;
+  }
+  mint& operator-=(const mint a) {
+  if ((x += mod-a.x) >= mod) x -= mod;
+  return *this;
+  }
+  mint& operator*=(const mint a) { (x *= a.x) %= mod; return *this;}
+  mint operator+(const mint a) const { return mint(*this) += a;}
+  mint operator-(const mint a) const { return mint(*this) -= a;}
+  mint operator*(const mint a) const { return mint(*this) *= a;}
+  mint pow(ll t) const {
+  if (!t) return 1;
+  mint a = pow(t>>1);
+  a *= a;
+  if (t&1) a *= *this;
+  return a;
+  }
+  // for prime mod
+  mint inv() const { return pow(mod-2);}
+  mint& operator/=(const mint a) { return *this *= a.inv();}
+  mint operator/(const mint a) const { return mint(*this) /= a;}
+};
+istream& operator>>(istream& is, const mint& a) { return is >> a.x;}
+ostream& operator<<(ostream& os, const mint& a) { return os << a.x;}
+
+vector<pair<long long, long long> > prime_factorize(long long N) {
+  vector<pair<long long, long long> > res;
+  for (long long a = 2; a * a <= N; ++a) {
+    if (N % a != 0) continue;
+    long long ex = 0; // 指数
+    // 割れる限り割り続ける
+    while (N % a == 0) {
+     ++ex;
+      N /= a;
+    }
+    // その結果を push
+    res.push_back({a, ex});
+  }
+  // 最後に残った数について
+  if (N != 1) res.push_back({N, 1});
+  return res;
+}
+
+vector<mint> fac(2000003, 1);
+void calc(int n){
+  rep(i, n){
+    fac.at(i+1) = fac.at(i) * (i+1);
+  }
+  return;
+}
+
+mint mcom(int r, int c){ // (r+c)!/(r!c!)
+  mint a = fac.at(r+c);
+  mint b = fac.at(r);
+  mint d = fac.at(c);
+  mint ans = a / (b * d);
+  return ans;
+  }
+
+int main()
+{
+    ll N, M;
+    cin >> N >> M;
+    vector<pair<ll, ll>> p = prime_factorize(M);
+    calc(2000000);
+    mint ans = 1;
+    for(auto q : p){
+        ll e = q.second;
+        ans *= mcom(e, N-1);
+    }
+    cout << ans << endl;
+}
