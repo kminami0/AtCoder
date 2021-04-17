@@ -1,0 +1,12 @@
+{
+	"id": 21815469,
+	"epoch_second": 1618644993,
+	"problem_id": "jsc2021_d",
+	"contest_id": "jsc2021",
+	"user_id": "agarai3",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 400,
+	"length": 2105,
+	"result": "AC",
+	"execution_time": 6
+}
