@@ -1,0 +1,12 @@
+{
+	"id": 26379261,
+	"epoch_second": 1633495574,
+	"problem_id": "tdpc_fibonacci",
+	"contest_id": "tdpc",
+	"user_id": "agarai3",
+	"language": "C++ (GCC 9.2.1)",
+	"point": 8,
+	"length": 3390,
+	"result": "AC",
+	"execution_time": 1713
+}
